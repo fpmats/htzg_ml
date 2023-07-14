@@ -211,9 +211,9 @@ def train_final_model(X_train,y_train,is_full=True,use_bayes=False):
                     'max_features': [1,2,5],
                     }
     if use_bayes:
-        clf = BayesSearchCV(est, parameters,cv=10)
+        clf = BayesSearchCV(est, parameters,cv=10,n_jobs=-1)
     else:
-        clf = GridSearchCV(est, parameters,cv=10)
+        clf = GridSearchCV(est, parameters,cv=10,n_jobs=-1)
     clf.fit(X_train, y_train)
     #print(clf.best_estimator_)
     best_est = clf.best_estimator_

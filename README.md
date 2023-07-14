@@ -44,6 +44,10 @@ Then, to load the models, run them on the training and holdout data, generate tr
 python htzg_show_ert_results.py
 ```
 
+# Using our Model for Inference
+
+If you want to run your own materials with our model, an example is shown in the ```ml_inference_example.ipynb``` notebook. Our models use the ```Scikit-Learn``` library, which you can find full documentation for [here](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html#sklearn.ensemble.ExtraTreesRegressor.predict).
+
 # References 
 
 1: Geurts, Pierre, Damien Ernst, and Louis Wehenkel. "Extremely randomized trees." Machine learning 63 (2006): 3-42.
